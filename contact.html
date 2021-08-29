@@ -1,0 +1,98 @@
+<doctype html>
+    <html>
+    <head>
+        <title>Login</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+    <body>
+        <nav class= "nav nav_top">
+            <div class="logo">
+                <a href="index.html"><img src="1Stop 01.png" width="150"></a>
+            </div>
+            <div class="nav_side">
+                <a href="about.html">About Us</a>
+                <a href="services.html">Services</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="contact.html">Contacts</a>
+                <a href="login.html">Login/Register</a>
+            </div>
+        </nav>
+        <div class="contact_container">
+            <h2>Contact Us</h2>
+            <div class="g_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14016.120170815404!2d77.23445092115583!3d28.56886056424004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f
+                13.1!3m3!1m2!1s0x390ce3ad801d293d%3A0x7f730966747ee8fc!2sLajpat%20Nagar%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1630129810114!5m2!1sen!2sin" 
+                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div class=contact_content>
+                <p><b>Address: Delhi,India</b></p>
+                <p><b>Call: +91 9810559056</b></p>
+                <p><b>Mail: support@gmail.com</b></p>
+               
+            </div>
+        </div>
+        <div class="feed">
+            <h2>Write a Review</h2>
+            <div class="feed_form">
+            <form name="submit_googlesheets" method="post">
+                <input type="text" id="username" name="Name" placeholder="Full Name" ><br>
+                 <input type="email"id="email" name="Email" placeholder="Email ID" ><br>
+                 <input type="number"id="number" name="Number" placeholder="Contact Number" ><br>
+                 <textarea rows="5" cols="7" name="Review" placeholder="Write your Review" ></textarea><br>
+                 <button type="submit">Submit</button>
+                
+            </form>
+            </div>
+        
+        </div>
+        <hr>
+
+
+        <footer>
+            <div class="footer_logo">
+                <a href="index.html"><img src="1Stop 01.png" width="150"></a>
+            </div>
+            <div class="pages">
+                <h3>Pages</h3>
+                <a href="about.html">About Us</a>|
+                <a href="services.html">Services</a>|
+                <a href="blogs.html">Blogs</a>|
+                <a href="">Login</a>|
+                <a href ="">Sign Up</a>
+
+            </div>
+            <div class="doc">
+                <h3>Documents</h3>
+                <a href="">Privacy Policy</a>|
+                <a href="">Terms and Conditions</a>|
+                <a href="">Refund Policy</a>
+            </div>
+            <div class="social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/1Stopai-102490171820303/" target="_blank"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/1stop.ai/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+            <div class="contact">
+                <h3>Contact Us</h3>
+                <a href="https://api.Whatsapp.com/send?phone=+919810559056" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="mailto :support@1stop.ai" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <hr>
+            <p>Copyright &copy; 2021 1stop. All rights reserved</p>
+            
+
+        </footer>
+       
+ <script type="text/javascript">
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyJ8A-Nda5Cd4IUpvVCjMRyOwYzy1DbO6-4-ZNhK1jjqoFeCRZOOilwtWkiu_UruDNhcA/exec'
+            const form = document.forms['submit_googlesheets']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thank You ! We Will Get Back To You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+</script>
